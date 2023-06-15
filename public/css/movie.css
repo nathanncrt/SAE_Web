@@ -1,0 +1,256 @@
+/*
+* movie.css
+* Nathan NICART & Quentin LAHOUSSE
+ */
+/** Partie de base pour toute les pages*/
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    border: solid blue 2px;
+    background-color: gray;
+}
+/** Header d'une page*/
+.header {
+    height: 40%;
+    border: solid black 3px;
+    color: red;
+    margin: 10px;
+    text-align: center;
+    font-size: 30px;
+    background-color: gray;
+}
+/** Bouton Home dans le header*/
+.home__picture img {
+    width: 50px;
+    height: auto;
+}
+
+
+
+.home-button {
+    width: 5%;
+    min-width: 50px;
+    max-width: 100px;
+}
+
+
+/* Styles des autres boutons dans le header */
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin: 5px;
+}
+
+.button:hover {
+    background-color: #0056b3;
+}
+
+/** Conteneur d'une page*/
+.content {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    border: solid black 3px;
+    overflow-y: auto;
+    margin: 10px;
+    background-color: gray;
+}
+
+.list {
+    flex-basis: calc(33.33% - 20px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+/** Pied de page*/
+.footer {
+    border: solid black 3px;
+    margin: 10px;
+    text-align: center;
+    background-color: gray;
+}
+
+/** Style pour l'index.php */
+/** Titre d'un film */
+.picture__title {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 10px;
+}
+/** Image d'un film */
+.picture__movie img {
+    transition: transform 0.3s ease;
+}
+
+.picture__movie img:hover {
+    transform: scale(1.1);
+}
+
+/**Style pour movie.php*/
+
+/**Partie description du film*/
+/**Description d'un film */
+.moviedesc {
+    width: 100%;
+    display: flex;
+    text-align: justify;
+    margin: 20px;
+    gap: 20px;
+    padding: 0;
+}
+
+.moviedesc__img {
+    flex: 1;
+    border: solid black 3px;
+}
+
+.moviedesc__info {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.moviedesc__title-date {
+    display: flex;
+    justify-content: space-between;
+    gap: 5px;
+}
+
+.moviedesc__title {
+    flex-basis: 75%;
+    border: solid black 3px;
+}
+
+.moviedesc__date {
+    flex-basis: 25%;
+    border: solid black 3px;
+}
+
+.moviedesc__originalTitle {
+    display: flex;
+    justify-content: flex-end;
+    border: solid black 3px;
+}
+
+.moviedesc__tagline {
+    border: solid black 3px;
+}
+
+.moviedesc__overview {
+    border: solid black 3px;
+}
+
+/** Partie sur les personnes du casting*/
+/** Conteneur d'une personne ayant participé à un film */
+.movie__people {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+
+    margin: 10px;
+}
+
+/** Vignette d'une personne ayant participé à un film */
+.movie__people-picture img {
+    margin: 10px;
+    height: auto;
+    width: auto;
+    transition: transform 0.3s ease;
+}
+
+.movie__people-picture img:hover {
+    transform: scale(1.1);
+}
+/** Information d'une personne ayant participé à un film (role & nom) */
+.movie__people-info{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+
+}
+.movie__people-rule {
+    height: 50%;
+    width: auto;
+    text-align: center;
+    border: solid black 3px;
+
+}
+
+.movie__people-name {
+    height: 50%;
+    width: auto;
+    text-align: center;
+    border: solid black 3px;
+
+}
+
+
+.filter{
+    display: flex;
+    margin: 0;
+    padding-left: 10px;
+    padding-bottom: 10px;
+
+
+}
+
+.filter select{
+    color: #555555;
+    cursor: pointer;
+    overflow: hidden;
+    border-radius: 5px;
+    border: 1px solid #CED4DA;
+    width: 10%;
+    height: 110%;
+}
+
+/* Média query pour les écrans de téléphone */
+@media only screen and (max-width: 600px) {
+    /* Styles spécifiques pour les écrans de téléphone */
+    .moviedesc {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .moviedesc__img {
+        order: -1;
+        margin-bottom: 20px;
+    }
+
+    .moviedesc__info {
+        order: 0;
+    }
+
+    .moviedesc__title-date {
+        flex-direction: column;
+    }
+
+
+    .moviedesc__title,
+    .moviedesc__date,
+    .moviedesc__originalTitle,
+    .moviedesc__tagline,
+    .moviedesc__overview {
+        margin-bottom: 20px;
+    }
+}
+
+

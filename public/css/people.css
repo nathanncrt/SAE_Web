@@ -1,0 +1,284 @@
+/*
+* people.css
+* Nathan NICART & Quentin LAHOUSSE
+*/
+
+/* Partie de base pour toutes les pages */
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    border: solid blue 2px;
+    background-color: gray;
+    font-family: "Bogart", sans-serif;
+}
+
+/* Header d'une page */
+.header {
+    height: 40%;
+    border: solid black 3px;
+    color: red;
+    margin: 10px;
+    text-align: center;
+    font-size: 30px;
+    background-color: gray;
+}
+
+/* Bouton Home dans le header */
+.home__picture img {
+    width: 5%;
+    height: auto;
+    transition: transform 0.3s ease
+}
+
+.home-button {
+    width: 5%;
+    min-width: 50px;
+    max-width: 100px;
+}
+
+/* Conteneur d'une page */
+.content {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    border: solid black 3px;
+    overflow-y: auto;
+    margin: 10px;
+    background-color: gray;
+}
+
+.list {
+    flex-basis: calc(33.33% - 20px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+/* Pied de page */
+.footer {
+    border: solid black 3px;
+    margin: 10px;
+    text-align: center;
+    background-color: gray;
+}
+
+.people {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 10px;
+}
+
+.people__desc {
+    width: auto;
+    display: flex;
+    text-align: justify;
+    margin: 20px;
+    gap: 20px;
+    padding: 0;
+}
+
+.people__picture {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    margin: 10px;
+}
+
+.people__picture img {
+    height: 99%;
+    width: auto;
+    transition: transform 0.3s ease;
+}
+
+.people__picture img:hover {
+    transform: scale(1.1);
+}
+
+.people__info {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    flex: 1;
+    height: 100%;
+}
+
+.people__info>* {
+    margin: 10px;
+}
+
+.people__name {
+    height: auto;
+    width: auto;
+    text-align: center;
+    border: solid black 3px;
+}
+
+.people__placeOfBirth {
+    height: auto;
+    width: auto;
+    text-align: center;
+    border: solid black 3px;
+}
+
+.people__rule {
+    height: auto;
+    width: auto;
+    text-align: center;
+    border: solid black 3px;
+}
+
+.people__biography {
+    text-align: center;
+    border: solid black 3px;
+}
+
+.people__desc {
+    display: flex;
+    align-items: center;
+}
+
+.people__dateinfo {
+    display: flex;
+    gap: 3px;
+}
+
+.people__birthday {
+    flex: 49%;
+    text-align: center;
+    border: solid black 3px;
+}
+
+.people__dateseparator {
+    flex: 2%;
+    text-align: center;
+}
+
+.people__deathday {
+    flex: 49%;
+    text-align: center;
+    border: solid black 3px;
+}
+
+/* Partie sur les films auxquelles la personne a participé */
+.people__movie-info {
+    display: flex;
+    margin: 10px;
+}
+
+
+.people__movie-picture img{
+    margin: 10px;
+    width: auto;
+    transition: transform 0.3s ease;
+}
+
+.people__movie-picture img:hover{
+    transform: scale(1.1);
+
+}
+
+.people__movie-info-content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.people__movie-name {
+    width: 70%;
+    text-align: center;
+    border: solid black 3px;
+    margin: 5px;
+    padding: 5px;
+}
+
+.people__movie-date {
+    text-align: center;
+    width: 30%;
+    border: solid black 3px;
+    margin: 5px;
+    padding: 5px;
+}
+
+.people__movie-rule {
+    flex: 1;
+    text-align: center;
+    border: solid black 3px;
+    margin: 5px;
+    padding: 5px;
+}
+
+.people__movie-title-date {
+    display: flex;
+
+}
+
+/* Pour les smartphones */
+@media only screen and (max-width: 480px) {
+    .people__desc {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .people__picture {
+        margin: 0 auto;
+    }
+
+    .people__info {
+        width: 100%;
+    }
+}
+/* Pour les écrans d'une largeur inférieure ou égale à 600px */
+@media only screen and (max-width: 600px) {
+    .people__desc {
+        flex-direction: column;
+    }
+
+    .people__picture {
+        align-self: center;
+        margin-bottom: 10px;
+    }
+
+    .people__info {
+        text-align: center;
+    }
+}
+/* Pour les tablettes */
+@media only screen and (max-width: 768px) {
+    .people__desc {
+        flex-direction: column;
+    }
+
+    .people__picture {
+        align-self: center;
+        margin-bottom: 10px;
+    }
+
+    .people__info {
+        text-align: center;
+    }
+
+}
+
+/* Pour les PC */
+@media only screen and (min-width: 992px) {
+    .people__desc {
+        flex-direction: row;
+    }
+
+    .people__picture {
+        margin: 10px;
+    }
+
+    .people__info {
+        width: auto;
+    }
+}
+

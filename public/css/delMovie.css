@@ -1,0 +1,119 @@
+/*
+* delMovie.css
+* Nathan NICART & Quentin LAHOUSSE
+ */
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    border: solid blue 2px;
+    background-color: gray;
+    font-family: "Bogart", sans-serif;
+}
+
+.header {
+    height: 30%;
+    border: solid black 3px;
+    color: red;
+    margin: 10px;
+    text-align: center;
+    font-size: 30px;
+    background-color: gray;
+}
+
+.content {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    border: solid black 3px;
+    overflow-y: auto;
+    margin: 10px;
+    background-color: gray;
+}
+
+.delMovie__content {
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    margin: 10px;
+}
+
+.delMovie__content-title {
+    flex-grow: 1;
+    text-align: center;
+}
+
+.delMovie__content-btn {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.btn {
+    padding: 5px 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.btn-delete {
+    background-color: #dc3545;
+}
+
+.btn:hover,
+.btn-delete:hover {
+    background-color: #0069d9;
+}
+
+.btn:active,
+.btn-delete:active {
+    background-color: #0062cc;
+}
+
+.btn:focus,
+.btn-delete:focus {
+    outline: none;
+    box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.5);
+}
+
+.footer {
+    border: solid black 3px;
+    margin: 20px;
+    text-align: center;
+    background-color: gray;
+}
+
+.home__picture img {
+    width: 5%;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+@media screen and (max-width: 768px) {
+    .content {
+        flex-direction: row;
+    }
+
+    .delMovie__content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .delMovie__content-title {
+        text-align: center;
+    }
+
+    .delMovie__content-btn {
+        width: auto;
+        margin-top: 10px;
+        align-self: center;
+    }
+}
